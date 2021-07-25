@@ -1,0 +1,19 @@
+{
+  "name": "infaq-wallet",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "This is backend server for infaq wallet",
+  "main": "serves.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "keywords": [
+    "backend",
+    "server"
+  ],
+  "author": "Space Ark 7",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
