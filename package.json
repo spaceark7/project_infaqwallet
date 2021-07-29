@@ -5,7 +5,10 @@
   "description": "This is backend server for infaq wallet",
   "main": "serves.js",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix infaqwallet",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "backend",
@@ -14,6 +17,12 @@
   "author": "Space Ark 7",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
   }
 }

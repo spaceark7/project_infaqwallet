@@ -1,5 +1,10 @@
 import express from 'express'
 import data from './data/data.js'
+import connectDB from './config/database.js'
+import dotenv from 'dotenv'
+
+dotenv.config()
+connectDB()
 
 const app = express()
 
@@ -24,4 +29,9 @@ app.get('/api/rincian/:tanggal/:id', (req, res) => {
   res.json(dt)
 })
 
-app.listen(5000, console.log('Server running @port 5000'))
+const PORT = process.env.PORT || 5000
+
+app.listen(
+  PORT,
+  console.log(`Server running in ${process.env.NODE_ENV} mode @port ${PORT}`)
+)
